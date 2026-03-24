@@ -10,8 +10,6 @@ RUN wget https://wordpress.org/latest.tar.gz && \
 	tar -xzf latest.tar.gz && \
 	mv wordpress/* /var/www/html/ && \
 	rm -rf wordpress latest.tar.gz
-#COPY whatever files needed from this directory to where wordpress will run
-
 
 EXPOSE 9000
 
