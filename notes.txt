@@ -7,3 +7,15 @@ WordPress container
 -contains WordPress files
 -runs php-fpm
 -listens on 9000
+
+MariaDB container
+-stores data
+-runs on 3306
+-initialized by script
+-persists data in volume
+
+docker compose
+-which services exist
+-how they connect
+-which volumes they share
+-which env vars they get
