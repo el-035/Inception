@@ -8,5 +8,5 @@ define('DB_PASSWORD', '$DB_PASSWORD');
 define('DB_HOST', '$DB_HOST');
 EOF
 
-#-F makes it run un foreground
+#-F makes it. run un foreground
 exec php-fpm -F

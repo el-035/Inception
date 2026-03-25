@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:12
 
 #COPY <host-path> <image-path> - this instruction tells the builder to copy files from the host and put them into the container image.
 

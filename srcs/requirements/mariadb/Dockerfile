@@ -1,4 +1,4 @@
-FROM debian
+FROM debian:12
 
 #install mariadb
 RUN apt-get update && apt-get install -y mariadb-server mariadb-client
