@@ -7,6 +7,3 @@ define('DB_USER', '$DB_USER');
 define('DB_PASSWORD', '$DB_PASSWORD');
 define('DB_HOST', '$DB_HOST');
 EOF
-
-#-F makes it. run un foreground
-exec php-fpm -F
