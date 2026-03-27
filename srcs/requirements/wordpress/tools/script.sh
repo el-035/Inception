@@ -3,6 +3,8 @@ set -e
 
 cd /var/www/html
 
+sleep 3
+
 #download wordpress
 if [ ! -f wp-load.php ]; then
 	echo "Downloading wordpress"
@@ -11,11 +13,12 @@ else
 	echo "Wordpress already downloaded"
 fi
 
+rm -f /var/www/html/wp-config.php
 # create wp-config
 if [ ! -f wp-config.php ]; then
 	echo "creating wp-config.php"
 	wp config create --allow-root \
-		--path=/var/www/html --dbname="$MYDB_NAME" \
+		--path=/var/www/html --dbname="$DB_NAME" \
 		--dbuser="$DB_USER" --dbpass="$DB_PASSWORD" \
 		--dbhost="$DB_HOST"
 else

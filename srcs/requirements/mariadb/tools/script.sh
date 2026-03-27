@@ -15,11 +15,11 @@ while ! mysqladmin ping --silent; do
 done
 
 # create db and user if database doesnt already exist
-if [ ! -d "/var/lib/mysql/$MYDB_NAME" ]; then
+if [ ! -d "/var/lib/mysql/$DB_NAME" ]; then
 	echo "Creating database"
-	mysql -u root -p"$DB_ROOT_PASS" -e "CREATE DATABASE IF NOT EXISTS \`$MYDB_NAME\`;"
+	mysql -u root -p"$DB_ROOT_PASS" -e "CREATE DATABASE IF NOT EXISTS \`$DB_NAME\`;"
 	mysql -u root -p"$DB_ROOT_PASS" -e "CREATE USER IF NOT EXISTS '$DB_USER'@'%' IDENTIFIED BY '$DB_PASSWORD';"
-	mysql -u root -p"$DB_ROOT_PASS" -e "GRANT ALL PRIVILEGES ON \`$MYDB_NAME\`.* TO '$DB_USER'@'%';"
+	mysql -u root -p"$DB_ROOT_PASS" -e "GRANT ALL PRIVILEGES ON \`$DB_NAME\`.* TO '$DB_USER'@'%';"
 	mysql -u root -p"$DB_ROOT_PASS" -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS';"
 	mysql -u root -p"$DB_ROOT_PASS" -e "FLUSH PRIVILEGES;"
 else
