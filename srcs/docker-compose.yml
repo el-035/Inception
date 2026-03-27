@@ -52,14 +52,14 @@ volumes:
     driver_opts:
       type: none
       o: bind
-      device: /home/el/data/wordpress #CHANGE LOGIN
+      device: /home/efittant/data/wordpress
 
   mariadb:
     driver: local
     driver_opts:
       type: none
       o: bind
-      device: /home/el/data/mariadb #CHANGE LOGIN
+      device: /home/efittant/data/mariadb
 
 networks:
   inception:
