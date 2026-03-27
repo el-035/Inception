@@ -19,3 +19,14 @@ docker compose
 -how they connect
 -which volumes they share
 -which env vars they get
+
+
+
+enter MARIADB container
+docker exec -it mariadb bash
+mysql -u root -p
+SHOW DATABASES;
+SELECT User, Host FROM mysql.user; #check users
+
+
+docker exec -it service bash

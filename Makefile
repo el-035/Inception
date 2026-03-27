@@ -3,7 +3,7 @@ COMPOSE_FILE := ./srcs/docker-compose.yml
 
 
 up:
-	$(DOCKER) -f $(COMPOSE_FILE) up --build
+	$(DOCKER) -f $(COMPOSE_FILE) up
 
 build:
 	$(DOCKER) -f $(COMPOSE_FILE) build

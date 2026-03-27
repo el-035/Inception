@@ -16,9 +16,9 @@ services:
       - wordpress:/var/www/html
     networks:
       - inception
-    #restart: always
+    restart: always
     depends_on:
-      - wordpress
+     - wordpress
 
   wordpress:
     container_name: wordpress
@@ -29,20 +29,22 @@ services:
       - wordpress:/var/www/html
     networks:
       - inception
-    #restart: always
+    restart: always
     depends_on:
-      - mariadb
+     - mariadb
     
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb
     #image: mariadb
     env_file: .env
+    expose:
+      - "3306"
     volumes:
       - mariadb:/var/lib/mysql
     networks:
       - inception
-    #restart: always
+    restart: always
 
 volumes:
   wordpress:

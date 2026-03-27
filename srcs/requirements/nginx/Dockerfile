@@ -15,7 +15,7 @@ RUN mkdir -p /etc/nginx/ssl
 RUN openssl req -x509 -nodes \
 	-out /etc/nginx/ssl/cert.crt \
 	-keyout /etc/nginx/ssl/cert.key \
-	-subj "/C=AT/ST=Vienna/L=Vienna/O=42 Vienna/OU=efittant/CN=efittant.42.fr"
+	-subj "/C=AT/ST=Vienna/L=Vienna/O=42 Vienna/OU=student/CN=efittant.42.fr"
 
 #copy server configuration file into default conf file 
 COPY ./conf/nginx.conf /etc/nginx/conf.d/default.conf
