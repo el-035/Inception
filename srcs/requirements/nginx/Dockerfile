@@ -1,7 +1,5 @@
 FROM debian:12
 
-#COPY <host-path> <image-path> - this instruction tells the builder to copy files from the host and put them into the container image.
-
 # Install the application dependencies
 RUN apt-get update && apt-get install -y nginx openssl
 
