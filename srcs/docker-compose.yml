@@ -9,7 +9,7 @@ services:
   nginx:
     container_name: nginx
     build: ./requirements/nginx
-    image: inception-nginx
+    image: nginx
     ports: 
       - "443:443"
     volumes:
@@ -23,7 +23,7 @@ services:
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress
-    image: inception-wordpress
+    image: wordpress
     env_file: .env
     volumes:
       - wordpress:/var/www/html
@@ -36,7 +36,7 @@ services:
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb
-    image: inception-mariadb
+    image: mariadb
     env_file: .env
     expose:
       - "3306"
